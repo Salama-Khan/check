@@ -12,17 +12,23 @@ body {
 
 .form-container {
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
 }
 
-.form-group {
-    display: flex;
+.form-page {
+    display: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.form-page.active {
+    display: flex;
+    opacity: 1;
 }
 
 label {
@@ -30,12 +36,18 @@ label {
     color: #333;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="password"] {
     padding: 10px;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 button {
@@ -51,4 +63,17 @@ button {
 
 button:hover {
     background-color: #e69d17;
+}
+
+.next-btn {
+    margin-left: auto;
+}
+
+.prev-btn {
+    margin-right: auto;
+}
+
+/* Show first page initially */
+#page-1 {
+    display: flex;
 }

@@ -3,16 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up Form</title>
+    <title>Multi-Step Sign Up Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="form-container">
         <form id="sign-up-form">
-            <div class="form-group">
+            <!-- First Name Page -->
+            <div class="form-page active" id="page-1">
                 <label for="first-name">What's your first name?</label>
                 <input type="text" id="first-name" name="first-name" required>
-                <button type="submit">OK</button>
+                <div class="nav-buttons">
+                    <button type="button" id="next-1" class="next-btn">→</button>
+                </div>
+            </div>
+
+            <!-- Last Name Page -->
+            <div class="form-page" id="page-2">
+                <label for="last-name">What's your last name?</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <div class="nav-buttons">
+                    <button type="button" id="prev-2" class="prev-btn">←</button>
+                    <button type="button" id="next-2" class="next-btn">→</button>
+                </div>
+            </div>
+
+            <!-- Email Page -->
+            <div class="form-page" id="page-3">
+                <label for="email">What's your email?</label>
+                <input type="email" id="email" name="email" required>
+                <div class="nav-buttons">
+                    <button type="button" id="prev-3" class="prev-btn">←</button>
+                    <button type="button" id="next-3" class="next-btn">→</button>
+                </div>
+            </div>
+
+            <!-- Password Page -->
+            <div class="form-page" id="page-4">
+                <label for="password">Create a password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="nav-buttons">
+                    <button type="button" id="prev-4" class="prev-btn">←</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
             </div>
         </form>
     </div>
